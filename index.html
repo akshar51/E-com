@@ -13,7 +13,7 @@
     <!-- NAVBAR -->
     <header class="navbar bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Ecommerce</a>
+          <a class="navbar-brand ms-5" href="#">Buy</a>
           <input type="text" class="search ms-auto me-3 w-50 py-2 px-3" placeholder="Search product">
           <button class="navbar-toggler py-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <div class="cart d-flex py-1">
@@ -21,14 +21,14 @@
                     <i class="fa-solid fa-cart-shopping me-3"></i>
                 </div>
                 <div class="cart-item">
-                    <p class="mb-0 fw-bold item mb-1">1 item</p>
-                    <p class="mb-0 fw-bold amount"><span><i class="fa-solid fa-indian-rupee-sign me-1"></i></span>500</p>
+                    <p class="mb-0 fw-bold item mb-1">0 items</p>
+                    <p class="mb-0 fw-bold amount text-start"><span><i class="fa-solid fa-indian-rupee-sign"></i></span>0</p>
                 </div>
             </div>
           </button>
           <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+              <h6 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">My Cart</h6>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
@@ -39,24 +39,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#">Link</a>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li>
               </ul>
-              <form class="d-flex mt-3" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
             </div>
           </div>
         </div>
@@ -67,15 +50,181 @@
         <!-- Cards -->
          <section class="card">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="col-md-4"></div>
+              <h1 class="my-4">Dairy, Bread & Eggs</h1>
+              <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="./img/e-com-dairy-img-1.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Amul Taaza Toned Fresh Milk</h5>
+                      <p class="card-text">500 ml</p>
+                      <p class="price-container">
+                        <span class="fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>27</span>
+                        <button type="button" class="btn border-success float-end fw-semibold text-success">ADD</button>
+                      </p>
                     </div>
+                  </div>
                 </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="./img/ecom-dairy-img-2.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Amul Gold Full Cream Fresh Milk</h5>
+                      <p class="card-text">500 ml</p>
+                      <p class="price-container">
+                        <span class="fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>33</span>
+                        <button type="button" class="btn border-success float-end fw-semibold text-success">ADD</button>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="./img/ecom-dairy-img-3.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Amul Masti Pouch Curd</h5>
+                      <p class="card-text">400 g</p>
+                      <p class="price-container">
+                        <span class="fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>35</span>
+                        <button type="button" class="btn border-success float-end fw-semibold text-success">ADD</button>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="./img/ecom-dairy-img-4.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Amul Salted Butter</h5>
+                      <p class="card-text">100 g</p>
+                      <p class="price-container">
+                        <span class="fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>60</span>
+                        <button type="button" class="btn border-success float-end fw-semibold text-success">ADD</button>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!------------- card-2 ------------->
+              <h1 class="my-4">Snacks & Munchies</h1>
+              <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="./img/ecom-snack-img-1.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Cheetos Cheez Puffs</h5>
+                      <p class="card-text">28 g</p>
+                      <p class="price-container">
+                        <span class="fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>10</span>
+                        <button type="button" class="btn border-success float-end fw-semibold text-success">ADD</button>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="./img/ecom-snack-img-2.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Jacker Original Potato Crisps</h5>
+                      <p class="card-text">160 g</p>
+                      <p class="price-container">
+                        <span class="fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>165</span>
+                        <button type="button" class="btn border-success float-end fw-semibold text-success">ADD</button>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="./img/ecom-snacks-img-3.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Jacker Potato Crisps Sour Cream & Onion</h5>
+                      <p class="card-text">100 g</p>
+                      <p class="price-container">
+                        <span class="fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>89</span>
+                        <button type="button" class="btn border-success float-end fw-semibold text-success">ADD</button>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="./img/ecom-snacks-img-4.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Jacker Vegetable Potato Chips</h5>
+                      <p class="card-text">160 g</p>
+                      <p class="price-container">
+                        <span class="fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>165</span>
+                        <button type="button" class="btn border-success float-end fw-semibold text-success">ADD</button>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!----------- card-3 ------------>
+              <h1 class="my-4">Fresh Vegetable</h1>
+              <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="./img/ecom-veg-img-1.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Potato</h5>
+                      <p class="card-text">1 kg</p>
+                      <p class="price-container">
+                        <span class="fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>24</span>
+                        <button type="button" class="btn border-success float-end fw-semibold text-success">ADD</button>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="./img/ecom-veg-img-2.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Onion</h5>
+                      <p class="card-text">1 kg</p>
+                      <p class="price-container">
+                        <span class="fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>26</span>
+                        <button type="button" class="btn border-success float-end fw-semibold text-success">ADD</button>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="./img/ecom-veg-img-3.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Ginger</h5>
+                      <p class="card-text">200 g</p>
+                      <p class="price-container">
+                        <span class="fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>13</span>
+                        <button type="button" class="btn border-success float-end fw-semibold text-success">ADD</button>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="./img/ecom-veg-img-4.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Green Capsicum</h5>
+                      <p class="card-text">250 g</p>
+                      <p class="price-container">
+                        <span class="fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>17</span>
+                        <button type="button" class="btn border-success float-end fw-semibold text-success">ADD</button>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
          </section>
        </main>
-      
+      <footer class="text-center py-4 fw-semibold">
+        <p>@All right by akshar</p>
+      </footer>
     
 
 

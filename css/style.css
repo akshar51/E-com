@@ -5,21 +5,31 @@
 }
 
 body{
-    background-color:rgb(56, 56, 56);
+    background-color:rgb(255, 255, 255);
 }
 header{
     display: inline-block;position: relative;
 }
 .navbar{
-    background-color:rgb(56, 56, 56) !important;
+    background-color:rgb(255, 255, 255) !important;
     border-bottom: 2px solid rgb(69, 69, 69);
     padding: 12px;
     display: block;
 }
-
+.navbar-brand{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.navbar-brand::after{
+    content: ".Anything";
+    color: orange;
+    font-size: 2rem;
+    font-weight: bolder;
+    -webkit-text-stroke: 1px #fff;
+}
 .search{
     border-radius: 8px;
-    border: none;
+    border: 1px solid lightgrey;
     outline: none;
 
 }
@@ -35,4 +45,22 @@ header{
 .item,.amount{
     color: white;
     font-size: 1rem;
+}
+
+.card{
+    background-color:rgb(255, 255, 255) !important;
+    
+}
+.card-title{
+    min-height: 50px;
+}
+.card-text{
+    min-height: 30px;
+}
+
+.price-container {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
