@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:rgb(56, 56, 56);
+}
+header{
+    display: inline-block;position: relative;
+}
+.navbar{
+    background-color:rgb(56, 56, 56) !important;
+    border-bottom: 2px solid rgb(69, 69, 69);
+    padding: 12px;
+    display: block;
+}
+
+.search{
+    border-radius: 8px;
+    border: none;
+    outline: none;
+
+}
+
+.fa-cart-shopping{
+    color:white
+}
+
+.navbar-toggler{
+    background-color: rgb(66, 184, 66);
+}
+
+.item,.amount{
+    color: white;
+    font-size: 1rem;
+}
