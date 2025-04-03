@@ -7,15 +7,20 @@
 body{
     background-color:rgb(255, 255, 255);
 }
-header{
-    display: inline-block;position: relative;
+#header{
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
+
 .navbar{
     background-color:rgb(255, 255, 255) !important;
-    border-bottom: 2px solid rgb(69, 69, 69);
+    border-bottom: 1px solid rgb(147, 147, 147);
     padding: 12px;
     display: block;
 }
+
+
 .navbar-brand{
     font-size: 2rem;
     font-weight: bolder;
@@ -63,4 +68,23 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+}
+/* banner */
+.banner-container img{
+    width: 100%;
+}
+
+/* off-canvas */
+
+.cart-img img{
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.card{
+    transition: 0.5s ease;
+}
+.card:hover{
+    scale: 1.05;
 }

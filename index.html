@@ -11,7 +11,7 @@
 <body>
 
     <!-- NAVBAR -->
-    <header class="navbar bg-body-tertiary">
+    <header class="navbar bg-body-tertiary" id="header">
         <div class="container-fluid">
           <a class="navbar-brand ms-5" href="#">Buy</a>
           <input type="text" class="search ms-auto me-3 w-50 py-2 px-3" placeholder="Search product">
@@ -34,10 +34,34 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <div class="cart-item border d-flex border rounded">
+                    <div class="cart-img">
+                      <img src="./img/e-com-dairy-img-1.avif" alt="">
+                    </div>
+                    <div class="cart-content w-100 d-flex justify-content-between p-3">
+                      <div class="cart-name w-100">
+                        <p class="mb-1">Amul tazza</p>
+                        <p class="mb-1">500 ml</p>
+                        <p><i class="fa-solid fa-indian-rupee-sign me-1"></i>27</p>
+                      </div>
+                      <div class="cart-btn d-flex align-items-center btn-group">
+                        <button class="minus btn btn-success p-1"><i class="fa-solid fa-minus"></i></button>
+                        <div class="cart-text p-1 text-white bg-success btn px-2" disabled>0</div>
+                        <button class="plus btn btn-success p-1"><i class="fa-solid fa-plus"></i></button>
+                      </div>
+                    </div>
+                  </div>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                <li class="nav-item mt-4 border rounded p-3">
+                  <h4>Bill detail</h4>
+                  <div class="cart-price d-flex justify-content-between">
+                    <span>Item Total</span>
+                    <span><i class="fa-solid fa-indian-rupee-sign"></i>27</span>
+                  </div>
+                  <div class="cart-total d-flex justify-content-between border-top border-2 mt-2 py-2">
+                    <span class="fw-bold">Grand Total</span>
+                    <span><i class="fa-solid fa-indian-rupee-sign"></i>27</span>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -47,10 +71,17 @@
 
       <!-- Main  -->
        <main>
+        <section class="banner">
+          <div class="container">
+            <div class="banner-container">
+              <img src="./img/ecom-banner.webp" alt="">
+            </div>
+          </div>
+        </section>
         <!-- Cards -->
-         <section class="card">
+         <section class="cards">
             <div class="container">
-              <h1 class="my-4">Dairy, Bread & Eggs</h1>
+              <h1 class="my-4">Dairy Product</h1>
               <div class="row row-cols-1 row-cols-md-4 g-4">
                 <div class="col">
                   <div class="card h-100">
@@ -59,8 +90,8 @@
                       <h5 class="card-title">Amul Taaza Toned Fresh Milk</h5>
                       <p class="card-text">500 ml</p>
                       <p class="price-container">
-                        <span class="fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>27</span>
-                        <button type="button" class="btn border-success float-end fw-semibold text-success">ADD</button>
+                        <span class="fs-5 fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>27</span>
+                        <button type="button" class="btn border-success float-end fw-semibold text-success px-4">ADD</button>
                       </p>
                     </div>
                   </div>
@@ -72,8 +103,8 @@
                       <h5 class="card-title">Amul Gold Full Cream Fresh Milk</h5>
                       <p class="card-text">500 ml</p>
                       <p class="price-container">
-                        <span class="fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>33</span>
-                        <button type="button" class="btn border-success float-end fw-semibold text-success">ADD</button>
+                        <span class="fs-5 fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>33</span>
+                        <button type="button" class="btn border-success float-end fw-semibold text-success px-4">ADD</button>
                       </p>
                     </div>
                   </div>
@@ -85,8 +116,8 @@
                       <h5 class="card-title">Amul Masti Pouch Curd</h5>
                       <p class="card-text">400 g</p>
                       <p class="price-container">
-                        <span class="fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>35</span>
-                        <button type="button" class="btn border-success float-end fw-semibold text-success">ADD</button>
+                        <span class="fs-5 fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>35</span>
+                        <button type="button" class="btn border-success float-end fw-semibold text-success px-4">ADD</button>
                       </p>
                     </div>
                   </div>
@@ -98,8 +129,8 @@
                       <h5 class="card-title">Amul Salted Butter</h5>
                       <p class="card-text">100 g</p>
                       <p class="price-container">
-                        <span class="fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>60</span>
-                        <button type="button" class="btn border-success float-end fw-semibold text-success">ADD</button>
+                        <span class="fs-5 fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>60</span>
+                        <button type="button" class="btn border-success float-end fw-semibold text-success px-4">ADD</button>
                       </p>
                     </div>
                   </div>
@@ -116,8 +147,8 @@
                       <h5 class="card-title">Cheetos Cheez Puffs</h5>
                       <p class="card-text">28 g</p>
                       <p class="price-container">
-                        <span class="fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>10</span>
-                        <button type="button" class="btn border-success float-end fw-semibold text-success">ADD</button>
+                        <span class="fs-5 fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>10</span>
+                        <button type="button" class="btn border-success float-end fw-semibold text-success px-4">ADD</button>
                       </p>
                     </div>
                   </div>
@@ -129,8 +160,8 @@
                       <h5 class="card-title">Jacker Original Potato Crisps</h5>
                       <p class="card-text">160 g</p>
                       <p class="price-container">
-                        <span class="fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>165</span>
-                        <button type="button" class="btn border-success float-end fw-semibold text-success">ADD</button>
+                        <span class="fs-5 fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>165</span>
+                        <button type="button" class="btn border-success float-end fw-semibold text-success px-4">ADD</button>
                       </p>
                     </div>
                   </div>
@@ -142,8 +173,8 @@
                       <h5 class="card-title">Jacker Potato Crisps Sour Cream & Onion</h5>
                       <p class="card-text">100 g</p>
                       <p class="price-container">
-                        <span class="fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>89</span>
-                        <button type="button" class="btn border-success float-end fw-semibold text-success">ADD</button>
+                        <span class="fs-5 fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>89</span>
+                        <button type="button" class="btn border-success float-end fw-semibold text-success px-4">ADD</button>
                       </p>
                     </div>
                   </div>
@@ -155,8 +186,8 @@
                       <h5 class="card-title">Jacker Vegetable Potato Chips</h5>
                       <p class="card-text">160 g</p>
                       <p class="price-container">
-                        <span class="fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>165</span>
-                        <button type="button" class="btn border-success float-end fw-semibold text-success">ADD</button>
+                        <span class="fs-5 fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>165</span>
+                        <button type="button" class="btn border-success float-end fw-semibold text-success px-4">ADD</button>
                       </p>
                     </div>
                   </div>
@@ -173,8 +204,8 @@
                       <h5 class="card-title">Potato</h5>
                       <p class="card-text">1 kg</p>
                       <p class="price-container">
-                        <span class="fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>24</span>
-                        <button type="button" class="btn border-success float-end fw-semibold text-success">ADD</button>
+                        <span class="fs-5 fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>24</span>
+                        <button type="button" class="btn border-success float-end fw-semibold text-success px-4">ADD</button>
                       </p>
                     </div>
                   </div>
@@ -186,8 +217,8 @@
                       <h5 class="card-title">Onion</h5>
                       <p class="card-text">1 kg</p>
                       <p class="price-container">
-                        <span class="fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>26</span>
-                        <button type="button" class="btn border-success float-end fw-semibold text-success">ADD</button>
+                        <span class="fs-5 fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>26</span>
+                        <button type="button" class="btn border-success float-end fw-semibold text-success px-4">ADD</button>
                       </p>
                     </div>
                   </div>
@@ -199,8 +230,8 @@
                       <h5 class="card-title">Ginger</h5>
                       <p class="card-text">200 g</p>
                       <p class="price-container">
-                        <span class="fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>13</span>
-                        <button type="button" class="btn border-success float-end fw-semibold text-success">ADD</button>
+                        <span class="fs-5 fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>13</span>
+                        <button type="button" class="btn border-success float-end fw-semibold text-success px-4">ADD</button>
                       </p>
                     </div>
                   </div>
@@ -212,8 +243,8 @@
                       <h5 class="card-title">Green Capsicum</h5>
                       <p class="card-text">250 g</p>
                       <p class="price-container">
-                        <span class="fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>17</span>
-                        <button type="button" class="btn border-success float-end fw-semibold text-success">ADD</button>
+                        <span class="fs-5 fw-semibold"><i class="fa-solid fa-indian-rupee-sign me-1"></i>17</span>
+                        <button type="button" class="btn border-success float-end fw-semibold text-success px-4">ADD</button>
                       </p>
                     </div>
                   </div>
