@@ -17,8 +17,9 @@ window.scrollTo({ top: 0, behavior: "smooth" });
 let addBtn = document.querySelectorAll(".price-container button");
 let cardTitle = document.querySelector(".card-title");
 let card = document.querySelectorAll(".card");
-let navbarNav = document.querySelector(".navbar-nav")
-let data = []
+let navbarNav = document.getElementById("navbarNav")
+let data = [];
+
 
 addBtn.forEach((btn,idx)=>{
     btn.addEventListener("click",()=>{
@@ -43,8 +44,8 @@ addBtn.forEach((btn,idx)=>{
 })
 
 const toggleBtn = ()=>{
-    let totalItem = data.length;
     let total = 0;
+    let totalItem = data.length;
     let btnItem = document.querySelector(".cart-item p");
     let btnPrice = document.querySelector(".btn-price span");
     data.forEach((arr)=>{
@@ -52,6 +53,7 @@ const toggleBtn = ()=>{
     })
     btnItem.innerHTML = `${totalItem} items`;
     btnPrice.innerHTML = `${total}`;
+    totalBill(total,totalItem)
 }
 
 
@@ -63,7 +65,7 @@ const cartDisplay = (idx)=>{
         li.innerHTML = 
         `
                       <div class="cart-item border d-flex border rounded mt-3">
-                        <div class="cart-img">
+                        <div class="cart-img my-auto">
                           <img src="${liData.img}" alt="">
                         </div>
                         <div class="cart-content w-100 d-flex justify-content-between p-3">
@@ -84,4 +86,26 @@ const cartDisplay = (idx)=>{
     })
 }
 
-  
+const totalBill = (total,qty)=>{
+    let totalPriceCart = total;
+    let li = document.createElement("li");
+    li.className = "nav-item mt-4 border rounded p-3"
+    li.innerHTML = 
+    `
+      <h4>Bill detail</h4>
+      <div class="cart-price d-flex justify-content-between">
+        <span class ="fw-bold">Item Total</span>
+        <span><i class="fa-solid fa-indian-rupee-sign"></i> ${totalPriceCart}</span>
+      </div>
+      <div class="cart-price d-flex justify-content-between">
+        <span class ="fw-bold">Total Product</span>
+        <span>${qty} qty</span>
+      </div>
+      <div class="cart-total d-flex justify-content-between border-top border-2 mt-2 py-2">
+        <span class="fw-bold">Grand Total</span>
+        <span><i class="fa-solid fa-indian-rupee-sign"></i> ${totalPriceCart}</span>
+      </div>
+      <button class="btn btn-success w-100 mt-3">Process</button>
+    `;
+    navbarNav.appendChild(li);
+}

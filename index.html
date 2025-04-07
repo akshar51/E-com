@@ -16,7 +16,7 @@
         <div class="container-fluid">
           <a class="navbar-brand ms-5" href="#">Buy</a>
           <input type="text" class="search ms-auto me-3 w-50 py-2 px-3" placeholder="Search product">
-          <button class="navbar-toggler py-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <button class="navbar-toggler py-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <div class="cart d-flex py-1">
                 <div class="cart-icon d-flex align-items-center">
                     <i class="fa-solid fa-cart-shopping me-3"></i>
@@ -33,18 +33,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item mt-4 border rounded p-3">
-                  <h4>Bill detail</h4>
-                  <div class="cart-price d-flex justify-content-between">
-                    <span>Item Total</span>
-                    <span><i class="fa-solid fa-indian-rupee-sign"></i>27</span>
-                  </div>
-                  <div class="cart-total d-flex justify-content-between border-top border-2 mt-2 py-2">
-                    <span class="fw-bold">Grand Total</span>
-                    <span><i class="fa-solid fa-indian-rupee-sign"></i>27</span>
-                  </div>
-                </li>
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" id="navbarNav">
               </ul>
             </div>
           </div>
