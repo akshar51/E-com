@@ -18,7 +18,7 @@ let addBtn = document.querySelectorAll(".price-container button");
 let cardTitle = document.querySelector(".card-title");
 let card = document.querySelectorAll(".card");
 let navbarNav = document.getElementById("navbarNav")
-let data = [];
+let data = JSON.parse(localStorage.getItem("cart")) || [];
 
 
 addBtn.forEach((btn,idx)=>{
@@ -37,7 +37,14 @@ addBtn.forEach((btn,idx)=>{
             quantity : 1,            
         }
 
-        data.push(obj);
+        let existing = data.find(item => item.title === obj.title);
+        if (existing) {
+          existing.quantity += 1;
+        } else {
+          data.push(obj);
+        }
+        
+        localStorage.setItem("cart",JSON.stringify(data))
         cartDisplay(idx);
         toggleBtn();
     })
@@ -45,11 +52,12 @@ addBtn.forEach((btn,idx)=>{
 
 const toggleBtn = ()=>{
     let total = 0;
-    let totalItem = data.length;
+    let totalItem = 0;
     let btnItem = document.querySelector(".cart-item p");
     let btnPrice = document.querySelector(".btn-price span");
     data.forEach((arr)=>{
-        total += parseFloat(arr.price);
+        total += parseFloat(arr.price) * arr.quantity;
+        totalItem += arr.quantity;
     })
     btnItem.innerHTML = `${totalItem} items`;
     btnPrice.innerHTML = `${total}`;
@@ -75,9 +83,9 @@ const cartDisplay = (idx)=>{
                             <p><i class="fa-solid fa-indian-rupee-sign me-1"></i>${liData.price}</p>
                           </div>
                           <div class="cart-btn d-flex align-items-center btn-group">
-                            <button class="minus btn btn-success p-1"><i class="fa-solid fa-minus"></i></button>
+                            <button class="minus btn btn-success p-1" onclick="addQuantity(-1,${idx})"><i class="fa-solid fa-minus"></i></button>
                             <div class="cart-text p-1 text-white bg-success btn px-2" disabled>${liData.quantity}</div>
-                            <button class="plus btn btn-success p-1"><i class="fa-solid fa-plus"></i></button>
+                            <button class="plus btn btn-success p-1" onclick="addQuantity(1,${idx})"><i class="fa-solid fa-plus"></i></button>
                           </div>
                         </div>
                       </div>
@@ -109,3 +117,20 @@ const totalBill = (total,qty)=>{
     `;
     navbarNav.appendChild(li);
 }
+
+const addQuantity = (num,idx)=>{
+  data[idx].quantity += num
+
+  if (data[idx].quantity <= 0) {
+      data.splice(idx, 1); 
+  }
+
+  localStorage.setItem("cart",JSON.stringify(data))
+  cartDisplay();
+  toggleBtn();
+}
+
+
+
+
+
