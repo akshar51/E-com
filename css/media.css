@@ -1,0 +1,11 @@
+@media (max-width: 576px) {
+    .marquee img {
+      max-height: 40px;
+    }
+}
+
+@media (max-width : 992px) {
+    .search{
+        display: none;
+    }
+}
