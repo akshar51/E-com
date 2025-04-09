@@ -23,7 +23,7 @@ let data = JSON.parse(localStorage.getItem("cart")) || [];
 
 addBtn.forEach((btn,idx)=>{
     btn.addEventListener("click",()=>{
-       
+       console.log(idx)
         let title = card[idx].querySelector(".card-title");
         let image = card[idx].querySelector(".card-img-top");
         let cardText = card[idx].querySelector(".card-text");
