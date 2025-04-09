@@ -61,12 +61,20 @@ const toggleBtn = ()=>{
     })
     btnItem.innerHTML = `${totalItem} items`;
     btnPrice.innerHTML = `${total}`;
-    totalBill(total,totalItem)
+    if (totalItem > 0) {
+      totalBill(total, totalItem);
+    }
 }
 
 
 const cartDisplay = (idx)=>{
     navbarNav.innerHTML = "";
+
+    if (data.length === 0) {
+      navbarNav.innerHTML = "<p class='text-center mt-3'>Your cart is empty.</p>";
+      return;
+    }
+
     data.forEach((liData,idx)=>{
         let li = document.createElement("li");
         li.className = "nav-item"
