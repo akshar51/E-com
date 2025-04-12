@@ -44,7 +44,7 @@ addBtn.forEach((btn,idx)=>{
           data.push(obj);
         }
         
-        localStorage.setItem("cart",JSON.stringify(data))
+        localStorage.setItem("cart", JSON.stringify(data));
         cartDisplay(idx);
         toggleBtn();
     })
@@ -132,13 +132,15 @@ const addQuantity = (num,idx)=>{
   if (data[idx].quantity <= 0) {
       data.splice(idx, 1); 
   }
-
-  localStorage.setItem("cart",JSON.stringify(data))
+  localStorage.setItem("cart", JSON.stringify(data));
   cartDisplay();
   toggleBtn();
 }
 
-
+window.addEventListener("DOMContentLoaded", () => {
+  cartDisplay();
+  toggleBtn();
+});
 
 
 
