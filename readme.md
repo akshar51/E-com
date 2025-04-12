@@ -2,6 +2,8 @@
 
 This is a frontend-only e-commerce website built using **HTML**, **CSS**, **Bootstrap**, and **JavaScript**. It includes a dynamic UI with product listings, a responsive layout, a shopping cart (offcanvas), animations, and more.
 
+🔗 **Live Preview**: [https://e-com-rouge.vercel.app/](https://e-com-rouge.vercel.app/)
+
 ---
 
 ## 🚀 Features
@@ -23,11 +25,11 @@ This is a frontend-only e-commerce website built using **HTML**, **CSS**, **Boot
 │
 ├── index.html        # Main HTML file (layout, structure, content)
 ├── css/
-│   └── style.css     # Custom styles (banner, cards, cart)
+│   └── style.css     # Custom styles
 ├── js/
-│   └── script.js     # JavaScript logic (cart, scroll, UI interaction)
+│   └── script.js     # JavaScript logic (cart, scrolling, etc.)
 ├── assets/
-│   └── img/          # Product and logo images
+│   └── img/          # Images, product thumbnails
 ```
 
 ---
@@ -40,26 +42,26 @@ This is a frontend-only e-commerce website built using **HTML**, **CSS**, **Boot
 - Each product card has an `Add to Cart` button.
 - Contains an offcanvas component that acts as the shopping cart.
 
-### 2. `css/style.css`
+### 2. `style.css`
 
 - Custom styling for:
-  - Banner section (`.banner`, `.marquee`)
+  - Banner section (`.banner`, `.banner h1`)
   - Scroll-to-top button
-  - Card hover effects and layout tweaks
-  - Overrides to Bootstrap components
+  - Animations using `@keyframes`
+  - Overrides to default Bootstrap styling
 
-### 3. `js/script.js`
+### 3. `script.js`
 
 Handles all interactivity:
 
 - **Cart Functions:**
-  - `addToCart()`: Adds items and updates the cart UI
-  - `addQuantity()` / `removeQuantity()`: Adjusts quantities in the cart
-  - `cartDisplay()` & `toggleBtn()`: Renders cart and updates cart badge
+  - `addToCart()`: Adds items and updates the UI.
+  - `addQuantity() / removeQuantity()`: Adjust quantity.
+  - `cartDisplay()`: Renders cart and bill summary.
 
 - **Scroll Button:**
-  - Appears when scrolling down
-  - Smooth scrolls to top on click
+  - Appears when scrolling down.
+  - Smooth scrolls to top on click.
 
 ---
 
@@ -68,44 +70,39 @@ Handles all interactivity:
 1. Clone or download the project:
    ```bash
    git clone https://github.com/yourusername/ecommerce-site.git
+   cd ecommerce-site
    ```
 2. Open `index.html` in your browser.
-3. Click "Add" on products to test the cart functionality.
-4. Use the cart icon to open the offcanvas panel.
+3. Interact with product cards and view the cart.
 
 ---
 
 ## 🛠 Technologies Used
 
-- **HTML5** – Markup language
-- **CSS3** – Styling with some animations
-- **JavaScript (ES6)** – Frontend logic and DOM manipulation
-- **Bootstrap 5** – Responsive grid and UI components
-- **Font Awesome & Bootstrap Icons** – For cart, rupee signs, and action buttons
-
----
-
-## 📸 Screenshots
-
-> Add some preview screenshots here of your site, cart, and banner.
+- **HTML5**
+- **CSS3**
+- **JavaScript (ES6)**
+- **Bootstrap 5**
+- **Font Awesome** (icons)
 
 ---
 
 ## 📚 Future Improvements
 
 - Backend integration (Node.js, Firebase, etc.)
-- Product filtering and search logic
-- Persistent cart using local storage
-- Checkout and payment flow
+- User authentication and login
+- Product detail pages
+- Checkout and payment integration
+- Admin panel to manage products
 
 ---
 
 ## 🤝 Contributing
 
-Feel free to fork this repo and submit pull requests for improvements or features.
+Pull requests are welcome! For major changes, please open an issue first.
 
 ---
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
